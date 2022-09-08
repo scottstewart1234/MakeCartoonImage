@@ -96,7 +96,7 @@ def live_cartoon_image(originalImage, #input image path
     
     cartoonImage = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
     
-    canny = cv2.Canny(cartoonImage, 150, 50,(5,5))
+    canny = cv2.Canny(cartoonImage, 140, 50,(5,5))
     canny = cv2.bitwise_not(canny)
     cartoonImage = cv2.bitwise_and(cartoonImage, cartoonImage, mask=canny)
     
